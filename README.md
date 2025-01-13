@@ -1,62 +1,54 @@
-CandyLand - Unity Prototype
+# CandyLand: The Video Game (Unity Prototype)
 
-This repository contains the source code for a simple CandyLand game prototype developed in Unity.
+[Image of CandyLand title page with whimsical candy cane forest and the text "CandyLand The Video Game" in a playful, cartoon font.](Candyland-Waterfall-Unity/Gemini_Generated_Image_1cd7381cd7381cd.jpg)
 
-Project Overview
+This repository contains the source code for a video game adaptation of the classic Milton Bradley board game, CandyLand, developed using the Unity engine. This project serves as a prototype to demonstrate core gameplay mechanics.
 
-This project aims to create a basic, playable version of the classic board game CandyLand within the Unity game engine. The prototype focuses on implementing core gameplay mechanics such as:
+**Project Overview**
 
-Game Board representation
-Player turns (rolling dice, moving pawns)
-Basic AI opponent
-Minimal UI elements
-Development
+This project aims to create a basic, playable version of CandyLand within the Unity environment. The focus is on implementing the fundamental elements of the board game:
 
-Engine: Unity
-Development Time: 10-20 hours
-Team: Trevor Hicks, Bennie Thompson, Elijah Saint Pierre, and John Beck
-How to Run
+* Game Board Representation (visually appealing)
+* Player Turns (rolling dice, moving pawns)
+* Engaging User Interface (intuitive controls, clear turn indicators)
+* Optional: Single-Player Mode (with a basic AI opponent)
 
-Clone the repository:
+**Development**
 
-Bash
+* **Engine:** Unity
+* **Estimated Development Time:** (to be determined)
+* **Team:** (list your team members)
 
-git clone <repository_url>
-Open the project in Unity:
+**How to Run (Once Available)**
 
-Open the Unity Hub.
-Click "Open" and select the cloned project folder.
-Build and Run:
+Instructions on how to run the game will be provided here after development progresses.
 
-Build the project for your target platform (e.g., Windows, Mac, WebGL).
-Run the executable.
-Known Issues/Limitations
+**Current Status**
 
-Simplified Gameplay: This is a basic prototype with limited features and AI.
-Minimal Visuals: Visuals and audio are basic for this initial version.
-Future Improvements
+(Provide a brief update on the project's current stage of development.)
 
-Enhance AI opponent behavior.
-Improve game board visuals and animations.
-Add multiplayer functionality.
-Implement sound effects and music.
-Create a more polished user interface.
-Contributing
+**Future Improvements**
 
-Contributions are welcome! Please fork the repository and submit a pull request with your changes.   
+* Enhanced AI opponent behavior (for single-player mode)
+* Richer game board visuals and animations
+* Multiplayer functionality (online or local)
+* Sound effects and background music
+* Additional features based on user feedback
 
-License
+**Contributing**
 
-[Choose an appropriate license, e.g., MIT License]
+We welcome contributions! If you're interested, please fork the repository and submit a pull request with your changes.
 
-Contact
+**License**
 
-[Your email addresses or any other contact information]
+(Choose an appropriate license, e.g., MIT License)
 
-Remember to:
+**Contact**
 
-Replace <repository_url> with the actual URL of your GitHub repository.
-Add more specific details about the project, such as the features implemented and any unique challenges encountered.
-Include screenshots or a short video to showcase the game.
-Update the README file as you progress on the project.
-This README provides a basic structure. Feel free to customize it to fit your project's specific needs and documentation requirements.
+(Provide your contact information)
+
+**Note:**
+
+* Replace `(to be determined)` with the estimated development time for your project.
+* Replace `(Provide a brief update on the project's current stage of development.)` with a description of your current progress.
+* Update the contact information with your email addresses or preferred contact method.
