@@ -1,6 +1,6 @@
 # CandyLand: The Video Game (Unity Prototype)
 
-[(Candyland-Waterfall-Unity/Gemini_Generated_Image_1cd7381cd7381cd.jpg)](https://github.com/phoenixgoldz/Candyland-Waterfall-Unity/blob/main/Gemini_Generated_Image_ukaw3xukaw3xukaw.jpg)
+![Candy Rush Grand Prix Logo](Content/Gemini_Generated_Image_ukaw3xukaw3xukaw.jpg)
 
 This repository contains the source code for a video game adaptation of the classic Milton Bradley board game, CandyLand, developed using the Unity engine. This project serves as a prototype to demonstrate core gameplay mechanics.
 
