@@ -1,54 +1,89 @@
 # CandyLand: The Video Game (Unity Prototype)
 
-![Candy Rush Grand Prix Logo](Content/Gemini_Generated_Image_ukaw3xukaw3xukaw.jpg)
+![CandyLand Logo](Content/Gemini_Generated_Image_ukaw3xukaw3xukaw.jpg)
 
-This repository contains the source code for a video game adaptation of the classic Milton Bradley board game, CandyLand, developed using the Unity engine. This project serves as a prototype to demonstrate core gameplay mechanics.
+We are adapting the beloved **CandyLand** board game by Milton Bradley into a digital experience using the Unity engine. This prototype showcases the game's core mechanics while preserving the colorful, family-friendly spirit of the original.
 
-**Project Overview**
+---
 
-This project aims to create a basic, playable version of CandyLand within the Unity environment. The focus is on implementing the fundamental elements of the board game:
+## Table of Contents
+1. [Project Overview](#project-overview)  
+2. [Development Details](#development-details)  
+3. [How to Run](#how-to-run)  
+4. [Current Status](#current-status)  
+5. [Future Improvements](#future-improvements)  
+6. [Contributing](#contributing)  
+7. [License](#license)   
 
-* Game Board Representation (visually appealing)
-* Player Turns (rolling dice, moving pawns)
-* Engaging User Interface (intuitive controls, clear turn indicators)
-* Optional: Single-Player Mode (with a basic AI opponent)
+---
 
-**Development**
+## Project Overview
 
-* **Engine:** Unity
-* **Estimated Development Time:** (to be determined)
-* **Team:** (list your team members)
+This project focuses on bringing **CandyLand** to life in a 3D environment, with simple turn-based gameplay and an intuitive user interface. Key objectives include:
 
-**How to Run (Once Available)**
+- **Authentic Board Representation:** A playful, colorful scene representing the CandyLand board.  
+- **Turn-Based Play:** Straightforward movement mechanics based on draw-cards or dice (final design pending).  
+- **User Interface:** Easy-to-navigate menus and clear player turn indicators.  
+- **Single-Player Mode (Optional):** Basic AI for solo play.
 
-Instructions on how to run the game will be provided here after development progresses.
+---
 
-**Current Status**
+## Development Details
 
-(Provide a brief update on the project's current stage of development.)
+- **Engine:** Unity  
+- **Project Timeline:** 2 weeks  
+- **Team Members:**  
+  - Trevor Hicks (Lead Developer)  
+  - *(Add more team members here)*  
 
-**Future Improvements**
+---
 
-* Enhanced AI opponent behavior (for single-player mode)
-* Richer game board visuals and animations
-* Multiplayer functionality (online or local)
-* Sound effects and background music
-* Additional features based on user feedback
+## How to Run
 
-**Contributing**
+Once the core features are implemented, we’ll provide:
 
-We welcome contributions! If you're interested, please fork the repository and submit a pull request with your changes.
+1. **Unity Version Requirements:** The exact version needed to open and run this project.  
+2. **Setup Instructions:** How to clone, open, and run the game in Unity.  
+3. **Play/Test Builds:** Links to early test builds, if available.
 
-**License**
+---
 
-(Choose an appropriate license, e.g., MIT License)
+## Current Status
 
-**Contact**
+**Stage:** Early Prototyping
 
-(Provide your contact information)
+- **Completed:**   
+- **In Progress:**
+  - Basic board layout and preliminary UI design.
+  - Turn management (card or dice system)  
+  - Player movement logic  
 
-**Note:**
+---
 
-* Replace `(to be determined)` with the estimated development time for your project.
-* Replace `(Provide a brief update on the project's current stage of development.)` with a description of your current progress.
-* Update the contact information with your email addresses or preferred contact method.
+## Possible Future Improvements
+
+1. **Enhanced AI:** Improved challenge for single-player mode.  
+2. **Visual & Animation Enhancements:** More immersive experience with animations and effects.  
+3. **Multiplayer Mode:** Potential for local/online multiplayer.  
+4. **Sound & Music:** Candy-themed audio to complement the visuals.  
+5. **Feedback-Driven Additions:** Incorporating suggestions from testers and community input.
+
+---
+
+## Contributing
+
+Contributions are welcome! To get involved:
+
+1. **Fork this repository** on GitHub.  
+2. **Create a new branch** for your feature or bug fix.  
+3. **Submit a pull request** with a detailed explanation of your changes.
+
+---
+
+## License
+
+This project will be available under an open-source license (e.g., [MIT License](LICENSE)). 
+
+---
+
+Feel free to reach out and share your ideas or feedback!  
