@@ -1,6 +1,6 @@
 # CandyLand: The Video Game (Unity Prototype)
 
-![CandyLand Logo](Content/Gemini_Generated_Image_ukaw3xukaw3xukaw.jpg)
+![CandyLand Logo](Content/1737226780658.jpg)
 
 We are adapting the beloved **CandyLand** board game by Milton Bradley into a digital experience using the Unity engine. This prototype showcases the game's core mechanics while preserving the colorful, family-friendly spirit of the original.
 
