@@ -67,11 +67,12 @@ This project focuses on bringing **CandyLand board game** to life in a 3D enviro
   - *(List any completed items here)*  
 
 - **In Progress:**
-- - Main emnu setup / Options menu
-  - load save game functionality 
+- - Main menu setup / Options menu
+  - load/save game functionality 
   - Basic board layout and preliminary UI design  
-  - Turn management (card system)  
-  - Player movement logic  
+  - Turn management (card bases system like the original board game card system)  
+  - Player movement logic
+  - landscape and board design 
 
 ---
 
