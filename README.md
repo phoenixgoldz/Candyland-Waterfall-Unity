@@ -2,8 +2,6 @@
 
 ![CandyLand Logo](Content/1737226780658.jpg)
 
-![Candyland Waterfall Scene](Candyland-Waterfall-Unity/Gemini_Generated_Image_1cd7381cd7381cd7.jpg)
-
 We are adapting the beloved **CandyLand** board game by Milton Bradley into a digital experience using the Unity engine. This prototype showcases the game's core mechanics while preserving the colorful, family-friendly spirit of the original.
 
 ---
