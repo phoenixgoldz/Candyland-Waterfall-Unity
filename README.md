@@ -2,6 +2,8 @@
 
 ![CandyLand Logo](Content/1737226780658.jpg)
 
+![Candyland Waterfall Scene](Candyland-Waterfall-Unity/Gemini_Generated_Image_1cd7381cd7381cd7.jpg)
+
 We are adapting the beloved **CandyLand** board game by Milton Bradley into a digital experience using the Unity engine. This prototype showcases the game's core mechanics while preserving the colorful, family-friendly spirit of the original.
 
 ---
@@ -19,7 +21,7 @@ We are adapting the beloved **CandyLand** board game by Milton Bradley into a di
 
 ## Project Overview
 
-This project focuses on bringing **CandyLand** to life in a 3D environment, with simple turn-based gameplay and an intuitive user interface. Key objectives include:
+This project focuses on bringing **CandyLand board game** to life in a 3D environment, with simple turn-based gameplay and an intuitive user interface. Key objectives include:
 
 - **Authentic Board Representation:** A playful, colorful scene representing the CandyLand board.  
 - **Turn-Based Play:** Straightforward movement mechanics based on draw-cards or dice (final design pending).  
@@ -30,21 +32,32 @@ This project focuses on bringing **CandyLand** to life in a 3D environment, with
 
 ## Development Details
 
-- **Engine:** Unity  
+- **Engine:** Unity 6000.0.0f1 (LTS)  
 - **Project Timeline:** 2 weeks  
 - **Team Members:**  
-  - Trevor Hicks (Lead Developer)  
+  - Trevor H. (Lead Developer)  
   - *(Add more team members here)*  
 
 ---
 
 ## How to Run
 
-Once the core features are implemented, we’ll provide:
+1. **Unity Version Requirements**  
+   - This project requires **Unity 6000.0.0f1 (LTS)**. Make sure you have it installed via [Unity Hub](https://unity.com/products/unity-hub).  
 
-1. **Unity Version Requirements:** The exact version needed to open and run this project.  
-2. **Setup Instructions:** How to clone, open, and run the game in Unity.  
-3. **Play/Test Builds:** Links to early test builds, if available.
+2. **Cloning the Repository**  
+   1. Open a terminal or command prompt.  
+   2. Navigate to the directory where you’d like to store the project.  
+   3. Run the following command (replace `<repository_url>` with the actual Git URL):  
+      ```bash
+      git clone <repository_url>
+      ```
+   4. Once cloned, open **Unity Hub**, click **Open**, and select the project folder you just cloned.
+
+3. **Build/Run Instructions**  
+   - Within Unity, go to **File > Build Settings**.  
+   - Choose your target platform (e.g., Windows, Mac, WebGL) and click **Build**.  
+   - After the build is complete, run the generated executable (for Windows/Mac) or host the WebGL build (for web).  
 
 ---
 
@@ -52,21 +65,25 @@ Once the core features are implemented, we’ll provide:
 
 **Stage:** Early Prototyping
 
-- **Completed:**   
+- **Completed:**  
+  - *(List any completed items here)*  
+
 - **In Progress:**
-  - Basic board layout and preliminary UI design.
-  - Turn management (card or dice system)  
+- - Main emnu setup / Options menu
+  - load save game functionality 
+  - Basic board layout and preliminary UI design  
+  - Turn management (card system)  
   - Player movement logic  
 
 ---
 
 ## Possible Future Improvements
 
-1. **Enhanced AI:** Improved challenge for single-player mode.  
-2. **Visual & Animation Enhancements:** More immersive experience with animations and effects.  
-3. **Multiplayer Mode:** Potential for local/online multiplayer.  
-4. **Sound & Music:** Candy-themed audio to complement the visuals.  
-5. **Feedback-Driven Additions:** Incorporating suggestions from testers and community input.
+1. **Enhanced AI:** Improve challenge for single-player mode.  
+2. **Visual & Animation Enhancements:** Create a more immersive experience with animations and effects.  
+3. **Multiplayer Mode:** Add potential for local or online multiplayer.  
+4. **Sound & Music:** Incorporate candy-themed audio to complement the visuals.  
+5. **Feedback-Driven Additions:** Integrate suggestions from testers and community input.
 
 ---
 
@@ -82,8 +99,8 @@ Contributions are welcome! To get involved:
 
 ## License
 
-This project will be available under an open-source license (e.g., [MIT License](LICENSE)). 
+This project will be available under an open-source license (e.g., [MIT License](LICENSE)).
 
 ---
 
-Feel free to reach out and share your ideas or feedback!  
+Feel free to reach out and share your ideas or feedback!
