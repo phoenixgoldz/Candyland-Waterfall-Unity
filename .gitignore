@@ -77,3 +77,4 @@ crashlytics-build.properties
 /CandyLand The Video Game/Temp/
 /CandyLand The Video Game/Logs
 CandyLand The Video Game/Logs
+*.log
