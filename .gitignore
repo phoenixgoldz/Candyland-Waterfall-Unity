@@ -46,6 +46,7 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
+*.meta
 
 # Unity3D generated meta files
 *.pidb.meta
@@ -72,3 +73,8 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 /CandyLand The Video Game/Library
+/CandyLand The Video Game/Assets/Simple Buttons
+/CandyLand The Video Game/Temp/
+/CandyLand The Video Game/Logs
+CandyLand The Video Game/Logs
+*.log
