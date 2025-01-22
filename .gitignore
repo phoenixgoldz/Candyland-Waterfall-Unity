@@ -46,6 +46,7 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
+*.meta
 
 # Unity3D generated meta files
 *.pidb.meta
@@ -74,20 +75,5 @@ crashlytics-build.properties
 /CandyLand The Video Game/Library
 /CandyLand The Video Game/Assets/Simple Buttons
 /CandyLand The Video Game/Temp/
-*.log
-*.log
-*.log
 /CandyLand The Video Game/Logs
-*.log
-*.log
-CandyLand The Video Game/Logs/AssetImportWorker0.log
-CandyLand The Video Game/Logs/AssetImportWorker1.log
-CandyLand The Video Game/Logs/shadercompiler-AssetImportWorker0-0.log
-CandyLand The Video Game/Logs/shadercompiler-AssetImportWorker1-0.log
-CandyLand The Video Game/Logs/shadercompiler-UnityShaderCompiler.exe-0.log
-CandyLand The Video Game/Logs/shadercompiler-UnityShaderCompiler.exe-1.log
-CandyLand The Video Game/Logs/shadercompiler-UnityShaderCompiler.exe-2.log
-CandyLand The Video Game/Logs/shadercompiler-UnityShaderCompiler.exe-3.log
-*.log
-/CandyLand The Video Game/Logs
-*.log
+CandyLand The Video Game/Logs
