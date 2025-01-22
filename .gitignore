@@ -88,3 +88,5 @@ CandyLand The Video Game/Logs/shadercompiler-UnityShaderCompiler.exe-0.log
 CandyLand The Video Game/Logs/shadercompiler-UnityShaderCompiler.exe-1.log
 CandyLand The Video Game/Logs/shadercompiler-UnityShaderCompiler.exe-2.log
 CandyLand The Video Game/Logs/shadercompiler-UnityShaderCompiler.exe-3.log
+*.log
+/CandyLand The Video Game/Logs
