@@ -1937,15 +1937,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe7274bde99f2d34bbf46f4460ce8070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTurnText: {fileID: 0}
-  drawButton: {fileID: 0}
-  drawnCardImage: {fileID: 0}
-  pauseMenuUI: {fileID: 0}
-  defaultCardSprite: {fileID: 0}
-  gameSongs: []
-  drawCardSound: {fileID: 0}
-  buttonClickSound: {fileID: 0}
-  audioSource: {fileID: 0}
+  playerTurnText: {fileID: 284850424}
+  drawButton: {fileID: 898937508}
+  drawnCardImage: {fileID: 709359934}
+  pauseMenuUI: {fileID: 1405905717}
+  defaultCardSprite: {fileID: 21300000, guid: 3336982cee92a5948a4c07295068f2fe, type: 3}
+  gameSongs:
+  - {fileID: 8300000, guid: 684ced87badfcbd47976976a0dadbe1e, type: 3}
+  - {fileID: 8300000, guid: adcd95253af41194cacd41552ded9896, type: 3}
+  - {fileID: 8300000, guid: 595cd816acc0ef049b82a52b3f73604a, type: 3}
+  - {fileID: 8300000, guid: c67b95c8ca4837e42b3143433de50282, type: 3}
+  - {fileID: 8300000, guid: b530a8c5996764f4c83753e42b9f7677, type: 3}
+  - {fileID: 8300000, guid: f353902e230d71a4eaaf10e9d618d892, type: 3}
+  drawCardSound: {fileID: 8300000, guid: f42d2bff9cbb0c94b8d8c7f2a8bb4ff7, type: 3}
+  buttonClickSound: {fileID: 8300000, guid: 9d7e6311e2ad15a41a4af070226a77d7, type: 3}
+  audioSource: {fileID: 1536643037}
+  isPaused: 0
+  currentSongIndex: 0
 --- !u!4 &1676252445
 Transform:
   m_ObjectHideFlags: 0
