@@ -267,6 +267,7 @@ GameObject:
   - component: {fileID: 534634091}
   - component: {fileID: 534634090}
   - component: {fileID: 534634089}
+  - component: {fileID: 534634092}
   m_Layer: 5
   m_Name: ContinueButton
   m_TagString: Untagged
@@ -337,7 +338,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 534634090}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 534634092}
+        m_TargetAssemblyTypeName: PlayerTurnUIManager, Assembly-CSharp
+        m_MethodName: ContinueGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &534634090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,6 +389,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534634087}
   m_CullTransparentMesh: 1
+--- !u!114 &534634092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534634087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe7274bde99f2d34bbf46f4460ce8070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTurnText: {fileID: 284850424}
+  drawButton: {fileID: 898937508}
+  drawnCardImage: {fileID: 709359934}
+  pauseMenuUI: {fileID: 1405905717}
+  defaultCardSprite: {fileID: 21300000, guid: 3336982cee92a5948a4c07295068f2fe, type: 3}
 --- !u!1 &709359932
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,6 +493,7 @@ GameObject:
   - component: {fileID: 716247700}
   - component: {fileID: 716247699}
   - component: {fileID: 716247698}
+  - component: {fileID: 716247701}
   m_Layer: 5
   m_Name: Exit Button
   m_TagString: Untagged
@@ -533,7 +564,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 716247699}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 716247701}
+        m_TargetAssemblyTypeName: PlayerTurnUIManager, Assembly-CSharp
+        m_MethodName: ExitToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &716247699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -572,6 +615,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 716247696}
   m_CullTransparentMesh: 1
+--- !u!114 &716247701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716247696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe7274bde99f2d34bbf46f4460ce8070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTurnText: {fileID: 284850424}
+  drawButton: {fileID: 898937508}
+  drawnCardImage: {fileID: 709359934}
+  pauseMenuUI: {fileID: 1405905717}
+  defaultCardSprite: {fileID: 21300000, guid: 3336982cee92a5948a4c07295068f2fe, type: 3}
 --- !u!1 &898937506
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,7 +810,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Player : '
+  m_text: 'Turn: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
