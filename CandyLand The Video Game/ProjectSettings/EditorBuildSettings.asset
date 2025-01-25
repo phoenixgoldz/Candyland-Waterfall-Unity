@@ -15,8 +15,8 @@ EditorBuildSettings:
     path: Assets/Scenes/PlayersUIScene.unity
     guid: 0835fc450375be24bb08de2eb427d544
   - enabled: 1
-    path: Assets/Scenes/GameScene.unity
-    guid: 05b90dc752d47804ebbbba76ea7c5664
+    path: Assets/Scenes/CandlyLandscape.unity
+    guid: 5c4fb5490387851438cea0bb271ce40f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
