@@ -6,15 +6,22 @@ using TMPro;
 public class PlayerTurnUIManager : MonoBehaviour
 {
     [Header("UI Elements")]
-    public TMP_Text playerTurnText; // Reference to display whose turn it is
-    public Button drawButton; // Button to draw a card
-    public Image drawnCardImage; // Image to show drawn card
-    public GameObject pauseMenuUI; // Reference to the pause menu UI
+    public TMP_Text playerTurnText;
+    public Button drawButton;
+    public Image drawnCardImage;
+    public GameObject pauseMenuUI;
 
     [Header("Game Settings")]
-    public Sprite defaultCardSprite; // Default sprite for the drawn card image
+    public Sprite defaultCardSprite;
 
-    private bool isPaused = false; // Tracks if the game is paused
+    [Header("Audio Settings")]
+    public AudioClip[] gameSongs; // Array of songs
+    public AudioClip drawCardSound;
+    public AudioClip buttonClickSound;
+    public AudioSource audioSource;
+
+    private bool isPaused = false;
+    private int currentSongIndex = 0;
 
     void Start()
     {
@@ -23,14 +30,29 @@ public class PlayerTurnUIManager : MonoBehaviour
 
         // Set up button listeners
         drawButton.onClick.AddListener(DrawCard);
+
+        // Start playing the first song
+        PlaySong(currentSongIndex);
     }
 
     void Update()
     {
-        // Open/close pause menu when ESC is pressed
+        // Handle pause menu toggle
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePauseMenu();
+        }
+
+        // Handle song skipping
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            SkipToNextSong();
+        }
+
+        // Handle song looping
+        if (!audioSource.isPlaying && !isPaused)
+        {
+            SkipToNextSong();
         }
     }
 
@@ -41,15 +63,16 @@ public class PlayerTurnUIManager : MonoBehaviour
 
     void DrawCard()
     {
-        // Implement your logic to draw a card and set its image
-        Sprite drawnCard = GetRandomCardSprite(); // Replace this with your card drawing logic
+        // Play sound effect for drawing a card
+        PlaySound(drawCardSound);
+
+        // Implement card drawing logic
+        Sprite drawnCard = GetRandomCardSprite();
         drawnCardImage.sprite = drawnCard;
     }
 
     Sprite GetRandomCardSprite()
     {
-        // Placeholder logic for drawing a random card
-        // Replace with your game’s card drawing logic
         return defaultCardSprite;
     }
 
@@ -58,8 +81,21 @@ public class PlayerTurnUIManager : MonoBehaviour
         isPaused = !isPaused;
         pauseMenuUI.SetActive(isPaused);
 
-        // Pause the game if paused
+        // Pause or resume the game
         Time.timeScale = isPaused ? 0 : 1;
+
+        // Pause or resume the music
+        if (isPaused)
+        {
+            audioSource.Pause();
+        }
+        else
+        {
+            audioSource.UnPause();
+        }
+
+        // Play button click sound
+        PlaySound(buttonClickSound);
     }
 
     public void ContinueGame()
@@ -71,6 +107,41 @@ public class PlayerTurnUIManager : MonoBehaviour
     {
         // Ensure the game unpauses when exiting
         Time.timeScale = 1;
+
+        // Stop all music
+        audioSource.Stop();
+
+        // Load the main menu
         SceneManager.LoadScene("StartMenuScene");
+
+        // Play button click sound
+        PlaySound(buttonClickSound);
+    }
+
+    void PlaySong(int songIndex)
+    {
+        if (gameSongs.Length > 0)
+        {
+            audioSource.clip = gameSongs[songIndex];
+            audioSource.loop = false; // Disable loop for individual songs
+            audioSource.Play();
+        }
+    }
+
+    void SkipToNextSong()
+    {
+        if (gameSongs.Length > 0)
+        {
+            currentSongIndex = (currentSongIndex + 1) % gameSongs.Length; // Loop through the array
+            PlaySong(currentSongIndex);
+        }
+    }
+
+    void PlaySound(AudioClip clip)
+    {
+        if (audioSource != null && clip != null)
+        {
+            audioSource.PlayOneShot(clip);
+        }
     }
 }
