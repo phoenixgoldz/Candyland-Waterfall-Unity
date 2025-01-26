@@ -33,10 +33,10 @@ This project focuses on bringing **CandyLand board game** to life in a 3D enviro
 - **Engine:** Unity 6000.0.0f1 (LTS)  
 - **Project Timeline:** 2 weeks  
 - **Team Members:**  
-  - Trevor H. (Lead Developer)  
-  - Bennie T. (Lead modeling)
-  - John H. (Code design)
-  - Elijah S. (UI/UX design)
+  - Trevor H. (Lead Developer, UI/UX design)  
+  - Bennie T. (Lead modeling and character design)
+  - John H. (Gameplay Programming)
+  - Elijah S. (UI/UX design and programming)
 
 ---
 
@@ -70,10 +70,11 @@ This project focuses on bringing **CandyLand board game** to life in a 3D enviro
   - Load/Save game functionality 
   - Basic board layout and preliminary UI design
   - Landscape and board design
-  - *(List any completed items here)*  
+  - Turn management (card bases system like the original board game card system)
+  
 
 - **In Progress:**
-  - Turn management (card bases system like the original board game card system)  
+  -  **Visual & Animation Enhancements:** Create a more immersive experience with animations and effects.
   - Player movement logic
    
 ---
@@ -81,10 +82,9 @@ This project focuses on bringing **CandyLand board game** to life in a 3D enviro
 ## Possible Future Improvements
 
 1. **Enhanced AI:** Improve challenge for single-player mode.  
-2. **Visual & Animation Enhancements:** Create a more immersive experience with animations and effects.  
-3. **Multiplayer Mode:** Add potential for local or online multiplayer.   
-5. **Feedback-Driven Additions:** Integrate suggestions from testers and community input.
-6. **Charectors List:** More characters to choose from besides the base gingerbread 
+2. **Multiplayer Mode:** Add potential for local or online multiplayer.   
+3. **Feedback-Driven Additions:** Integrate suggestions from testers and community input.
+4. **Charectors List:** More characters to choose from besides the base gingerbread 
 ---
 
 ## Contributing
