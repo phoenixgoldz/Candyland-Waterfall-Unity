@@ -9,8 +9,11 @@ public class GameManager : MonoBehaviour
     GameState gameState;
     playerPawn activePlayer;
     private bool drawled = false;
-    void Start()
-    {
+    void Start() {
+        players = new List<playerPawn>(PlayerPrefs.GetInt("players"));
+        for (int i = 0; i < players.Count; i++) {
+            
+        }
         //gameState = GameState.STARTSCREEN;
         gameState = GameState.INGAME;
         activePlayer = players[0];
