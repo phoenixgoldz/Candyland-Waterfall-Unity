@@ -34,7 +34,9 @@ This project focuses on bringing **CandyLand board game** to life in a 3D enviro
 - **Project Timeline:** 2 weeks  
 - **Team Members:**  
   - Trevor H. (Lead Developer)  
-  - *(Add more team members here)*  
+  - Bennie T. (Lead modeling)
+  - John H. (Code design)
+  - Elijah S. (UI/UX design)
 
 ---
 
