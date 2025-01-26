@@ -65,27 +65,26 @@ This project focuses on bringing **CandyLand board game** to life in a 3D enviro
 
 **Stage:** Early Prototyping
 
-- **Completed:**  
+- **Completed:**
+-  Main menu setup / Options menu
+  - Load/Save game functionality 
+  - Basic board layout and preliminary UI design
+  - Landscape and board design
   - *(List any completed items here)*  
 
 - **In Progress:**
-- - Main menu setup / Options menu
-  - load/save game functionality 
-  - Basic board layout and preliminary UI design  
   - Turn management (card bases system like the original board game card system)  
   - Player movement logic
-  - landscape and board design 
-
+   
 ---
 
 ## Possible Future Improvements
 
 1. **Enhanced AI:** Improve challenge for single-player mode.  
 2. **Visual & Animation Enhancements:** Create a more immersive experience with animations and effects.  
-3. **Multiplayer Mode:** Add potential for local or online multiplayer.  
-4. **Sound & Music:** Incorporate candy-themed audio to complement the visuals.  
+3. **Multiplayer Mode:** Add potential for local or online multiplayer.   
 5. **Feedback-Driven Additions:** Integrate suggestions from testers and community input.
-
+6. **Charectors List:** More characters to choose from besides the base gingerbread 
 ---
 
 ## Contributing
