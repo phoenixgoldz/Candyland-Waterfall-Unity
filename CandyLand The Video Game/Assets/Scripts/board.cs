@@ -6,13 +6,9 @@ public class board : MonoBehaviour
 
     [SerializeField] List<tile> path = new List<tile>();
 
-    //testing
-    [SerializeField] playerPawn testPlayer;
-    [SerializeField] card testCard;
     private void Start()
     {
 
-        Move(testPlayer, testCard);
     }
 
     public tile Move(playerPawn player, card card)
@@ -35,20 +31,21 @@ public class board : MonoBehaviour
 
         if (card.color == TILE_TYPE.SPECIAL) 
         {
+            Debug.Log("special");
             tile =  findSpecial(card);
         }
         else if (card.doubleCard)
-        { 
+        {
+            Debug.Log("double");
             tile = findDouble(card, remainingPath);
         }
         else
         {
+            Debug.Log("normal");
             tile = find(card, remainingPath);
         }
 
         //update player locations
-        player.currentTile = tile;
-        player.transform.position = tile.transform.position;
         Debug.Log(tile);
         return tile;
 
