@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/StartMenuScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/OptionsScene.unity
-    guid: 324bb08b5d800f74d838e997c2a93ad5
-  - enabled: 1
     path: Assets/Scenes/PlayersUIScene.unity
     guid: b93602fd1488ee44ab115b910f2eca4a
   - enabled: 1

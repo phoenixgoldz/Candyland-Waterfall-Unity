@@ -1,55 +1,69 @@
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+
+    //setup
     [SerializeField] public List<playerPawn> players;
     [SerializeField] public board board;
-    CardManager cardManager = new CardManager();
     GameState gameState;
+    CardManager cardManager = new CardManager();
+    [SerializeField] tile startTile;
+    [SerializeField] GameObject playerPrefab;
+    
+    //player updates
     playerPawn activePlayer;
     private bool drawled = false;
+    [SerializeField] TMP_Text TurnNumber;
+
+    //player movement
+    private bool moving = false;
+    List<tile> tilesToMoveThrough = new List<tile>();
+    [SerializeField] float moveSpeed = 0.5f;
+    private int currentTileIndex = 0;
+    private float moveTimer = 0f;
+    private Vector3 startPosition;
+    private Vector3 endPosition;
+
     void Start() {
         players = new List<playerPawn>();
         for (int i = 0; i < PlayerPrefs.GetInt("players"); i++) {
-            playerPawn player = new playerPawn();
-
+            GameObject Go = Instantiate<GameObject>(playerPrefab, startTile.transform.position, Quaternion.identity);
+            playerPawn player = Go.AddComponent<playerPawn>();
+            player.cam = Go.GetComponentInChildren<CinemachineCamera>();
+            player.currentTile = startTile;
             switch (i) {
-                case 0:
+                case 1:
                     PlayerPrefs.GetString("player1name");
                     PlayerPrefs.GetString("player1color");
-                    player.color = Color.red;
                     break;
-                case 1:
+                case 2:
 					PlayerPrefs.GetString("player2name");
 					PlayerPrefs.GetString("player2color");
-					player.color = Color.yellow;
-					break;
-                case 2:
-					PlayerPrefs.GetString("player3name");
-					PlayerPrefs.GetString("player3color");
-					player.color = Color.green;
 					break;
                 case 3:
-					PlayerPrefs.GetString("player4name");
-					PlayerPrefs.GetString("player4color");
-                    //player.color = Color.purple;
-                    player.color = new Color(230, 230, 250);
+					PlayerPrefs.GetString("player3name");
+					PlayerPrefs.GetString("player3color");
 					break;
                 case 4:
-					PlayerPrefs.GetString("player5name");
-					PlayerPrefs.GetString("player5color");
-					//player.color = Color.orange;
-					player.color = new Color(255, 127, 80);
+					PlayerPrefs.GetString("player4name");
+					PlayerPrefs.GetString("player4color");
 					break;
                 case 5:
+					PlayerPrefs.GetString("player5name");
+					PlayerPrefs.GetString("player5color");
+					break;
+                case 6:
 					PlayerPrefs.GetString("player6name");
 					PlayerPrefs.GetString("player6color");
-					player.color = Color.blue;
 					break;
             }
-
             players.Add(player);
+            
         }
         //gameState = GameState.STARTSCREEN;
         gameState = GameState.INGAME;
@@ -59,9 +73,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("active players turn " + activePlayer.turn);
-        Debug.Log("Drawled" + drawled);
-        Debug.Log("Active Player" + activePlayer);
         switch (gameState)
         {
             case GameState.STARTSCREEN:
@@ -79,29 +90,72 @@ public class GameManager : MonoBehaviour
                         if (drawled)
                         {
                             card drawnCard = cardManager.drawCard();
-                            Debug.Log(drawnCard.color);
-                            activePlayer.currentTile = board.Move(activePlayer, drawnCard);
-                            Debug.Log(activePlayer.currentTile.color);
-                            activePlayer.GetComponentInParent<Transform>().transform.position = activePlayer.currentTile.transform.position;
-                            activePlayer.turn = false;
                             drawled = false;
+                            // Initialize movement
+                            tilesToMoveThrough = board.Move(activePlayer, drawnCard);
+                            currentTileIndex = 0;
+                            moveTimer = 0f;
+                            startPosition = activePlayer.currentTile.transform.position;
+                            endPosition = tilesToMoveThrough[0].transform.position;
+                            moving = true;
+                        }
+                        if (moving) //player movement
+                        {
+                            if (currentTileIndex < tilesToMoveThrough.Count)
+                            {
+                                moveTimer += Time.deltaTime;
+                                float t = moveTimer / moveSpeed;
+                                activePlayer.transform.position = Vector3.Lerp(startPosition, endPosition, t);
+                                if (t >= 1f)
+                                {
+                                    activePlayer.currentTile = tilesToMoveThrough[currentTileIndex];
+                                    currentTileIndex++;
+                                    if (currentTileIndex < tilesToMoveThrough.Count)
+                                    {
+                                        startPosition = activePlayer.transform.position;
+                                        endPosition = tilesToMoveThrough[currentTileIndex].transform.position;
+                                        moveTimer = 0f;
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                // Finalize movement
+                                moving = false;
+                                activePlayer.turn = false;
+                                activePlayer.turnNumber++;
+                                activePlayer.cam.Priority = 0;
+                                TurnNumber.text = "" + activePlayer.turnNumber;
+                                activePlayer.currentTile = tilesToMoveThrough[tilesToMoveThrough.Count - 1];
+                                if (activePlayer.currentTile.end)
+                                { 
+                                    gameState = GameState.GAMEOVER;
+                                }
+                                tilesToMoveThrough.Clear();
+                            }
                         }
                     }
                     else
                     {
                         activePlayer.skipTurn = false;
                         activePlayer.turn = false;
+                        activePlayer.turnNumber++;
+                        activePlayer.cam.Priority = 0;
+                        TurnNumber.text = "" + activePlayer.turnNumber;
                     }
-
                 }
-                else {
+                else 
+                {
                     NextPlayer();
                 }
                 break;
             case GameState.GAMEOVER:
+                Debug.Log("GameOver");
                 break;
         }
     }
+
+
     public void NextPlayer()
     {
         for (int i = 0; i < players.Count; i++)
@@ -109,7 +163,7 @@ public class GameManager : MonoBehaviour
             playerPawn p = players[i];
             if (p == activePlayer)
             {
-                    if (i < players.Count - 2)
+                    if (i < players.Count - 1)
                     {
                         activePlayer = players[i + 1];
                     }
@@ -118,14 +172,19 @@ public class GameManager : MonoBehaviour
                         activePlayer = players[0];
                     }
                 activePlayer.turn = true;
-                    return;
+                activePlayer.cam.Priority = 1;
+                TurnNumber.text = "" + activePlayer.turnNumber;
+                return;
             }
         }
     }
 
     public void onDrawPress()
     {
-        drawled = true;
+        if (!moving)
+        {
+            drawled = true;
+        }
     }
 
     enum GameState

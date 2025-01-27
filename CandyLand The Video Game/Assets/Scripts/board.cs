@@ -11,7 +11,7 @@ public class board : MonoBehaviour
 
     }
 
-    public tile Move(playerPawn player, card card)
+    public List<tile> Move(playerPawn player, card card)
     {
         tile tile = new tile();
         List<tile> remainingPath = new List<tile>();
@@ -46,8 +46,25 @@ public class board : MonoBehaviour
         }
 
         //update player locations
-        Debug.Log(tile);
-        return tile;
+        
+        List<tile> betweenPath = new List<tile>();
+        afterPlayerTile = false;
+        foreach (tile t in path)
+        {
+            if (player.currentTile == t)
+            {
+                afterPlayerTile = true;
+            }
+            if (afterPlayerTile)
+            {
+                betweenPath.Add(t);
+            }
+            if (t == tile)
+            {
+                break;
+            }
+        }
+        return betweenPath;
 
 
     }
@@ -55,6 +72,7 @@ public class board : MonoBehaviour
     {
         foreach (tile tile in remainingPlayerPath)
         {
+            if (tile.end) return tile;
             if (card.color == tile.color)
             {
                     return tile;
@@ -67,6 +85,7 @@ public class board : MonoBehaviour
     {
         foreach (tile tile in path)
         {
+            if (tile.end) return tile;
             if (card.special == tile.special)
             {
                 return tile;
@@ -79,6 +98,7 @@ public class board : MonoBehaviour
         bool db = false;
         foreach (tile tile in remainingPlayerPath)
         {
+            if (tile.end) return tile;
             if (card.color == tile.color)
             {
                 if (db)
