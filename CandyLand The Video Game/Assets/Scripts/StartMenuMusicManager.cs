@@ -29,7 +29,7 @@ public class StartMenuMusicManager : MonoBehaviour
     void Update()
     {
         // Check if the current scene is "CandyLandscape" and stop the music
-        if (SceneManager.GetActiveScene().name == "CandyLandscape" && audioSource.isPlaying)
+        if (SceneManager.GetActiveScene().name == "CandlyLandscape" && audioSource.isPlaying)
         {
             StopMusic();
         }
