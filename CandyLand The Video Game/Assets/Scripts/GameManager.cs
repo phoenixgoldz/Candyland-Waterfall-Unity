@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public List<playerPawn> players;
     [SerializeField] public board board;
     GameState gameState;
-    CardManager cardManager = new CardManager();
+    [SerializeField] CardManager cardManager;
     [SerializeField] tile startTile;
     [SerializeField] GameObject playerPrefab;
     
@@ -19,6 +20,7 @@ public class GameManager : MonoBehaviour
     playerPawn activePlayer;
     private bool drawled = false;
     [SerializeField] TMP_Text TurnNumber;
+    [SerializeField] Image CardImg;
 
     //player movement
     private bool moving = false;
@@ -90,6 +92,7 @@ public class GameManager : MonoBehaviour
                         if (drawled)
                         {
                             card drawnCard = cardManager.drawCard();
+                            CardImg.sprite = drawnCard.cardImg;
                             drawled = false;
                             // Initialize movement
                             tilesToMoveThrough = board.Move(activePlayer, drawnCard);
