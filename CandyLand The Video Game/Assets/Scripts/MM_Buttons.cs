@@ -24,17 +24,17 @@ public class MM_Buttons : MonoBehaviour {
             SceneManager.LoadScene("CandlyLandscape");
             PlayerPrefs.SetInt("players", readyUps);
             PlayerPrefs.SetString("player1name", names[0].text);
-            PlayerPrefs.SetString("player1color", colors[0].text);
+            PlayerPrefs.SetString("player1color", "red");
 			PlayerPrefs.SetString("player2name", names[1].text);
-			PlayerPrefs.SetString("player2color", colors[1].text);
+			PlayerPrefs.SetString("player2color", "yellow");
 			PlayerPrefs.SetString("player3name", names[2].text);
-			PlayerPrefs.SetString("player3color", colors[2].text);
+			PlayerPrefs.SetString("player3color", "green");
 			PlayerPrefs.SetString("player4name", names[3].text);
-			PlayerPrefs.SetString("player4color", colors[3].text);
+			PlayerPrefs.SetString("player4color", "purple");
 			PlayerPrefs.SetString("player5name", names[4].text);
-			PlayerPrefs.SetString("player5color", colors[4].text);
+			PlayerPrefs.SetString("player5color", "orange");
 			PlayerPrefs.SetString("player6name", names[5].text);
-			PlayerPrefs.SetString("player6color", colors[5].text);
+			PlayerPrefs.SetString("player6color", "blue");
 			PlayerPrefs.Save();
         }
     }

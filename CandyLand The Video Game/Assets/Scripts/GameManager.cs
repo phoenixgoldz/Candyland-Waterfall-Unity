@@ -11,37 +11,45 @@ public class GameManager : MonoBehaviour
     private bool drawled = false;
     void Start() {
         players = new List<playerPawn>();
-        for (int i = 0; i <= PlayerPrefs.GetInt("players"); i++) {
+        for (int i = 0; i < PlayerPrefs.GetInt("players"); i++) {
             playerPawn player = new playerPawn();
 
             switch (i) {
-                case 1:
+                case 0:
                     PlayerPrefs.GetString("player1name");
                     PlayerPrefs.GetString("player1color");
+                    player.color = Color.red;
                     break;
-                case 2:
+                case 1:
 					PlayerPrefs.GetString("player2name");
 					PlayerPrefs.GetString("player2color");
+					player.color = Color.yellow;
 					break;
-                case 3:
+                case 2:
 					PlayerPrefs.GetString("player3name");
 					PlayerPrefs.GetString("player3color");
+					player.color = Color.green;
 					break;
-                case 4:
+                case 3:
 					PlayerPrefs.GetString("player4name");
 					PlayerPrefs.GetString("player4color");
+                    //player.color = Color.purple;
+                    player.color = new Color(230, 230, 250);
 					break;
-                case 5:
+                case 4:
 					PlayerPrefs.GetString("player5name");
 					PlayerPrefs.GetString("player5color");
+					//player.color = Color.orange;
+					player.color = new Color(255, 127, 80);
 					break;
-                case 6:
+                case 5:
 					PlayerPrefs.GetString("player6name");
 					PlayerPrefs.GetString("player6color");
+					player.color = Color.blue;
 					break;
             }
 
-            players.Add(new playerPawn());
+            players.Add(player);
         }
         //gameState = GameState.STARTSCREEN;
         gameState = GameState.INGAME;
