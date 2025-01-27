@@ -78,3 +78,6 @@ crashlytics-build.properties
 /CandyLand The Video Game/Logs
 CandyLand The Video Game/Logs
 *.log
+*.dwlt
+*.log
+/CandyLand The Video Game/Assets/TextMesh Pro
