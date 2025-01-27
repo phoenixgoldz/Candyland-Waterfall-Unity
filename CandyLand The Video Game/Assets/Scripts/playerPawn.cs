@@ -1,3 +1,4 @@
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class playerPawn : MonoBehaviour
@@ -7,6 +8,8 @@ public class playerPawn : MonoBehaviour
     [SerializeField] public tile currentTile;
     [SerializeField] public bool turn;
     [SerializeField] public bool skipTurn;
+    [SerializeField] public int turnNumber;
+    [SerializeField] public CinemachineCamera cam;
 
     void Start()
     {
