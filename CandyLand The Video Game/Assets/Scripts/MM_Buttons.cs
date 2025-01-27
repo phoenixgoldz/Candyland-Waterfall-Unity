@@ -1,7 +1,10 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MM_Buttons : MonoBehaviour {
+    [SerializeField] TMP_InputField[] names;
+    [SerializeField] TMP_Text[] colors;
     public int readyUps = 0;
 
     void Start() {
@@ -20,18 +23,18 @@ public class MM_Buttons : MonoBehaviour {
         if (readyUps > 0) { 
             SceneManager.LoadScene("CandlyLandscape");
             PlayerPrefs.SetInt("players", readyUps);
-            PlayerPrefs.SetInt("player1name", );
-            PlayerPrefs.SetInt("player1color", );
-			PlayerPrefs.SetInt("player2name", );
-			PlayerPrefs.SetInt("player2color", );
-			PlayerPrefs.SetInt("player3name", );
-			PlayerPrefs.SetInt("player3color", );
-			PlayerPrefs.SetInt("player4name", );
-			PlayerPrefs.SetInt("player4color", );
-			PlayerPrefs.SetInt("player5name", );
-			PlayerPrefs.SetInt("player5color", );
-			PlayerPrefs.SetInt("player6name", );
-			PlayerPrefs.SetInt("player6color", );
+            PlayerPrefs.SetString("player1name", names[0].text);
+            PlayerPrefs.SetString("player1color", colors[0].text);
+			PlayerPrefs.SetString("player2name", names[1].text);
+			PlayerPrefs.SetString("player2color", colors[1].text);
+			PlayerPrefs.SetString("player3name", names[2].text);
+			PlayerPrefs.SetString("player3color", colors[2].text);
+			PlayerPrefs.SetString("player4name", names[3].text);
+			PlayerPrefs.SetString("player4color", colors[3].text);
+			PlayerPrefs.SetString("player5name", names[4].text);
+			PlayerPrefs.SetString("player5color", colors[4].text);
+			PlayerPrefs.SetString("player6name", names[5].text);
+			PlayerPrefs.SetString("player6color", colors[5].text);
 			PlayerPrefs.Save();
         }
     }

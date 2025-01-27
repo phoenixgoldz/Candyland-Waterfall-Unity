@@ -5208,6 +5208,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9493ed8779b16a45beb136b5dedaf1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  names:
+  - {fileID: 1706529098}
+  - {fileID: 1637011258}
+  - {fileID: 1627956910}
+  - {fileID: 1096142461}
+  - {fileID: 313806459}
+  - {fileID: 1206011501}
+  colors: []
   readyUps: 0
 --- !u!1 &1321193952
 GameObject:
