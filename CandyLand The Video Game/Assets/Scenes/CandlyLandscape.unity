@@ -315,6 +315,7 @@ MonoBehaviour:
   cardManager: {fileID: 2083094984}
   startTile: {fileID: 1569385316442710975}
   playerPrefab: {fileID: 8257214856125604376, guid: 873c39b8df9ce8a49924c98219995171, type: 3}
+  DrawButton: {fileID: 898937506}
   TurnNumber: {fileID: 284850424}
   CardImg: {fileID: 709359934}
   moveSpeed: 0.5
@@ -2775,6 +2776,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '##'
   m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontAsset: {fileID: 11400000, guid: 0a6a712f6e491a8458d454292d35453f, type: 2}
   m_sharedMaterial: {fileID: 5599391790612811784, guid: 0a6a712f6e491a8458d454292d35453f, type: 2}
   m_fontSharedMaterials: []
@@ -3757,7 +3760,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1439263462109439137, guid: 576d0eb0480b9b94c843ba139e9afe81, type: 3}
       propertyPath: special
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6676489176297058922, guid: 576d0eb0480b9b94c843ba139e9afe81, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6201,7 +6204,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1439263462109439137, guid: 576d0eb0480b9b94c843ba139e9afe81, type: 3}
       propertyPath: special
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6676489176297058922, guid: 576d0eb0480b9b94c843ba139e9afe81, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7063,7 +7066,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1439263462109439137, guid: 576d0eb0480b9b94c843ba139e9afe81, type: 3}
       propertyPath: special
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6676489176297058922, guid: 576d0eb0480b9b94c843ba139e9afe81, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7594,6 +7597,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Round: '
   m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontAsset: {fileID: 11400000, guid: 0a6a712f6e491a8458d454292d35453f, type: 2}
   m_sharedMaterial: {fileID: 5599391790612811784, guid: 0a6a712f6e491a8458d454292d35453f, type: 2}
   m_fontSharedMaterials: []
@@ -12590,7 +12595,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1439263462109439137, guid: 576d0eb0480b9b94c843ba139e9afe81, type: 3}
       propertyPath: special
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6676489176297058922, guid: 576d0eb0480b9b94c843ba139e9afe81, type: 3}
       propertyPath: m_LocalPosition.x

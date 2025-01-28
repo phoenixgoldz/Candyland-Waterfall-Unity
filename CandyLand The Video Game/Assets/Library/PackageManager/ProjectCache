@@ -6,8 +6,8 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638734326565974505
-    m_Hash: 205969706
+      ticks: 638735147308428268
+    m_Hash: 667505191
   m_LockFileStatus:
     m_FilePath: C:/Neumont/SoftwareEngineering/Candyland-Waterfall-Unity/CandyLand
       The Video Game/Assets/Packages/packages-lock.json
@@ -15,8 +15,8 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638734326590561673
-    m_Hash: 3025046548
+      ticks: 638735147308518280
+    m_Hash: 2904195732
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
