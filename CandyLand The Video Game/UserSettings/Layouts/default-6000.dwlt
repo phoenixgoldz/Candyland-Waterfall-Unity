@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1706.6667
     height: 976
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Hierarchy
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 83
+  controlID: 94
   draggingID: 0
 --- !u!114 &3
 MonoBehaviour:
@@ -69,8 +69,8 @@ MonoBehaviour:
     y: 0
     width: 403.33325
     height: 920
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 76}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -95,8 +95,8 @@ MonoBehaviour:
     y: 0
     width: 328
     height: 545.3333
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 226}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 38
+  controlID: 39
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 39
+  controlID: 40
   draggingID: 0
 --- !u!114 &11
 MonoBehaviour:
@@ -271,8 +271,8 @@ MonoBehaviour:
     y: 0
     width: 975.3334
     height: 545.3333
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 226}
+  m_MaxSize: {x: 4002, y: 4026}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -326,7 +326,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -336,17 +336,17 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Trevor Hicks\Desktop\Candyland-Waterfall-Unity\CandyLand
-    The Video Game
+  m_LastProjectPath: C:\Users\Elijah\Unity\Candyland-Waterfall-Unity\CandyLand The
+    Video Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 60}
-    m_SelectedIDs: 68b20000
-    m_LastClickedID: 45672
-    m_ExpandedIDs: 00000000ecb10000eeb10000f0b10000f2b10000f4b1000000ca9a3b
+    m_SelectedIDs: dcb10000
+    m_LastClickedID: 45532
+    m_ExpandedIDs: 00000000dcb10000deb10000e0b10000e2b10000e4b10000e6b1000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -375,7 +375,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ecb10000eeb10000f0b10000f2b10000f4b10000
+    m_ExpandedIDs: 00000000dcb10000deb10000e0b10000e2b10000e4b10000e6b10000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -403,7 +403,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300002ccc00002cc00000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -523,7 +523,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: fa8bffff8495ffff1497ffff32a3ffff64a3ffff90a3ffffa4a3ffffb4a4ffff9cadffffc2adffffd4adffffdeadffffb2b0ffff98b9ffffbeb9ffffd0b9ffffdab9ffff7abaffffecc3ffff38c5ffff8adaffff90f4ffffa8f9ffffbe1201007014010078140100
+      m_ExpandedIDs: 0afaffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1169,9 +1169,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 960, y: 540, z: 50}
+    m_Target: {x: 528.2876, y: 318.2697, z: -154.54129}
     speed: 2
-    m_Value: {x: 960, y: 539.99963, z: 49.999966}
+    m_Value: {x: 528.2876, y: 318.2697, z: -154.54129}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1217,13 +1217,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    m_Target: {x: 0.024747612, y: 0.06941917, z: -0.0017255364, w: 0.9972937}
     speed: 2
-    m_Value: {x: 0.000000056830785, y: 0.0000007745807, z: -0.00000029756228, w: 1}
+    m_Value: {x: -0.024747614, y: -0.06941917, z: 0.0017255364, w: -0.9972938}
   m_Size:
-    m_Target: 552.66724
+    m_Target: 201.1928
     speed: 2
-    m_Value: 578.70917
+    m_Value: 201.1928
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1348,7 +1348,7 @@ MonoBehaviour:
       height: 720
     m_MinimalGUI: 1
   m_defaultScale: 0.6921296
-  m_LastWindowPixelSize: {x: 1460, y: 779}
+  m_LastWindowPixelSize: {x: 973.3334, y: 519.3333}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
