@@ -16,5 +16,6 @@ public class RR_Buttons : MonoBehaviour {
         ready = !ready;
         if (ready) mainButtons.readyUps += 1; 
         else mainButtons.readyUps -= 1;
-    }
+        mainButtons.readyText.text = "Players Ready? " + mainButtons.readyUps;
+	}
 }
