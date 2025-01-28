@@ -15,7 +15,7 @@ ModelImporter:
       name: GingerbreadAccent
     second: {fileID: 2100000, guid: f60413b3893e02046b6e6240bc8b68e5, type: 2}
   materials:
-    materialImportMode: 1
+    materialImportMode: 2
     materialName: 0
     materialSearch: 1
     materialLocation: 1
