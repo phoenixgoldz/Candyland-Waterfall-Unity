@@ -34,12 +34,14 @@ public class GameManager : MonoBehaviour
     private Vector3 startPosition;
     private Vector3 endPosition;
 
-    void Start() {
+    void Start() 
+    {
         //tests
         //board.testFind();
         //board.testFindDouble();
         //board.testFindSpecial();
 
+        // Initialize players
         players = new List<playerPawn>();
         for (int i = 0; i < PlayerPrefs.GetInt("players"); i++) {
             playerPrefab.GetComponentInChildren<Renderer>().material = c_materials[i];
@@ -48,12 +50,21 @@ public class GameManager : MonoBehaviour
             playerPawn player = Go.AddComponent<playerPawn>();
             player.cam = Go.GetComponentInChildren<CinemachineCamera>();
             player.currentTile = startTile;
-            
+
+            // Initialize turn numbers
+            player.turnNumber = 1; // Set initial turn number to 1
+
             players.Add(player);
         }
         //gameState = GameState.STARTSCREEN;
         gameState = GameState.INGAME;
+
+        // Set the first player as the active player
         activePlayer = players[0];
+        activePlayer.turn = true; 
+
+        // Display the initial turn number in the UI
+        TurnNumber.text = "1"; // Start with turn 1
     }
 
     // Update is called once per frame
@@ -73,6 +84,7 @@ public class GameManager : MonoBehaviour
                     
                     if (!activePlayer.skipTurn)
                     {
+
                         if (drawled)
                         {
                             card drawnCard = cardManager.drawCard();
