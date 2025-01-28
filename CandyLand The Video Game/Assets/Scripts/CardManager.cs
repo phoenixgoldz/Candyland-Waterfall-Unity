@@ -7,17 +7,7 @@ public class CardManager : MonoBehaviour
     [SerializeField] public List<Sprite> cardImagesSingle;
     [SerializeField] public List<Sprite> cardImagesDouble;
     [SerializeField] public List<Sprite> cardImagesSpecial;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+ 
     public card drawCard()
     { 
         card card = new card();

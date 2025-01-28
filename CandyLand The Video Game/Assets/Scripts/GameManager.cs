@@ -33,6 +33,11 @@ public class GameManager : MonoBehaviour
     private Vector3 endPosition;
 
     void Start() {
+        //tests
+        //board.testFind();
+        //board.testFindDouble();
+        //board.testFindSpecial();
+
         players = new List<playerPawn>();
         for (int i = 0; i < PlayerPrefs.GetInt("players"); i++) {
             GameObject Go = Instantiate<GameObject>(playerPrefab, startTile.transform.position, Quaternion.identity);
@@ -132,6 +137,11 @@ public class GameManager : MonoBehaviour
                                 activePlayer.cam.Priority = 0;
                                 TurnNumber.text = "" + activePlayer.turnNumber;
                                 activePlayer.currentTile = tilesToMoveThrough[tilesToMoveThrough.Count - 1];
+
+                                if (activePlayer.currentTile.special == SPECIAL_TYPE.LICORICE)
+                                {
+                                    activePlayer.skipTurn = true;
+                                }
                                 if (activePlayer.currentTile.end)
                                 { 
                                     gameState = GameState.GAMEOVER;

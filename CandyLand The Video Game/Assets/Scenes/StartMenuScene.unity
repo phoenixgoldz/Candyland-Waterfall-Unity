@@ -858,7 +858,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &326398875
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2294,7 +2294,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.7924528, g: 0.2247222, b: 0, a: 1}
+    m_HighlightedColor: {r: 0.38327694, g: 0.8207547, b: 0.78850585, a: 1}
     m_PressedColor: {r: 0, g: 0.7075472, b: 0.69309837, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -4219,10 +4219,10 @@ RectTransform:
   - {fileID: 1783353282}
   m_Father: {fileID: 1496931130}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -799.5419, y: 540.18}
-  m_SizeDelta: {x: 320.9193, y: 1080.4}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 160.45966, y: 0}
+  m_SizeDelta: {x: 320.9193, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1244965180
 MonoBehaviour:
@@ -4532,37 +4532,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Players progress through turns, challenges, and exploration, either solo
-    or multiplayer (local or online).
-
-
-    Movement:
-
-    Players move forward based
-    on drawing virtual cards in the game:
-
-    Single Color Card: Move to the next
-    spot of that color.
-
-    Double Color Card: Move two spaces ahead of that color.
-
-    Special
-    Biome Card: Teleport to a specific biome (e.g., the Peppermint Forest).
-
-    Movement
-    is controlled using Keyboard and mouse inputs for smoother transitions between
-    spaces.
-
-
-    Winning the Game:
-
-    The first player to reach the Candy Castle
-    wins.
-
-    To win, you must land exactly on the final space. If your card would
-    take you past it, you must wait until your next turn.
-
-'
+  m_text: "Players progress through turns, and exploration, either solo or local
+    multiplayer.\n\nMovement:\nPlayers move forward based on drawing virtual cards
+    in the game:\nSingle Color Card: Move to the next spot of that color.\nDouble
+    Color Card: Move two spaces ahead of that color.\nSpecial Biome Card: Teleport
+    to a specific biome (e.g., the Peppermint Forest).\nMovement is controlled by
+    clicking the left mouse to draw a card. \n\nWinning the Game:\nThe first player
+    to reach the Candy Castle wins.\nTo win, you must land exactly on the final space.
+    If your card would take you past it, you must wait until your next turn.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5134,6 +5111,7 @@ MonoBehaviour:
   playerSelectBgs: []
   addPlayersButtons: []
   readyUps: 0
+  readyText: {fileID: 0}
 --- !u!1 &1522071251
 GameObject:
   m_ObjectHideFlags: 0
@@ -6018,6 +5996,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1577036097}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1244965178}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -7243,7 +7233,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2117420284}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1577036097}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1244965178}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 326398874}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!222 &2117420286
 CanvasRenderer:
   m_ObjectHideFlags: 0
