@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < PlayerPrefs.GetInt("players"); i++) {
             playerPrefab.GetComponentInChildren<Renderer>().material = c_materials[i];
             
-            GameObject Go = Instantiate<GameObject>(playerPrefab, startTile.transform.position, Quaternion.identity);
+            GameObject Go = Instantiate(playerPrefab, startTile.transform.position, Quaternion.identity);
             playerPawn player = Go.AddComponent<playerPawn>();
             player.cam = Go.GetComponentInChildren<CinemachineCamera>();
             player.currentTile = startTile;
