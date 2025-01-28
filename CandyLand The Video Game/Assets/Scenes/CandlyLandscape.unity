@@ -310,6 +310,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea1da5ccfc458d24ca5b4e4532909969, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  c_materials:
+  - {fileID: 2100000, guid: 43705d69478fbd74d98103df0ce0a666, type: 2}
+  - {fileID: 2100000, guid: e0bc350bb81350a4c8f56784aed96697, type: 2}
+  - {fileID: 2100000, guid: e551024cd478fdc4b8fef796b4aa0149, type: 2}
+  - {fileID: 2100000, guid: 7a8de8b322b30e0448ed39c06f07f486, type: 2}
+  - {fileID: 2100000, guid: 77b2ef08246ded94887e83a5331f9aab, type: 2}
+  - {fileID: 2100000, guid: 417e9571f2b9e0e4c96931272ea34093, type: 2}
   players: []
   board: {fileID: 1628359289}
   cardManager: {fileID: 2083094984}

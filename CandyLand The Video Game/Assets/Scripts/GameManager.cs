@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    //color stuff
+    [SerializeField] Material[] c_materials;
 
     //setup
     [SerializeField] public List<playerPawn> players;
@@ -40,38 +42,14 @@ public class GameManager : MonoBehaviour
 
         players = new List<playerPawn>();
         for (int i = 0; i < PlayerPrefs.GetInt("players"); i++) {
+            playerPrefab.GetComponentInChildren<Renderer>().material = c_materials[i];
+            
             GameObject Go = Instantiate<GameObject>(playerPrefab, startTile.transform.position, Quaternion.identity);
             playerPawn player = Go.AddComponent<playerPawn>();
             player.cam = Go.GetComponentInChildren<CinemachineCamera>();
             player.currentTile = startTile;
-            switch (i) {
-                case 1:
-                    PlayerPrefs.GetString("player1name");
-                    PlayerPrefs.GetString("player1color");
-                    break;
-                case 2:
-					PlayerPrefs.GetString("player2name");
-					PlayerPrefs.GetString("player2color");
-					break;
-                case 3:
-					PlayerPrefs.GetString("player3name");
-					PlayerPrefs.GetString("player3color");
-					break;
-                case 4:
-					PlayerPrefs.GetString("player4name");
-					PlayerPrefs.GetString("player4color");
-					break;
-                case 5:
-					PlayerPrefs.GetString("player5name");
-					PlayerPrefs.GetString("player5color");
-					break;
-                case 6:
-					PlayerPrefs.GetString("player6name");
-					PlayerPrefs.GetString("player6color");
-					break;
-            }
-            players.Add(player);
             
+            players.Add(player);
         }
         //gameState = GameState.STARTSCREEN;
         gameState = GameState.INGAME;
