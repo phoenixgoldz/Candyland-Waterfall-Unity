@@ -7,6 +7,7 @@ public class MM_Buttons : MonoBehaviour
     [SerializeField] GameObject[] playerSelectBgs; // Array for all PlayerSelectBg objects
     [SerializeField] GameObject[] addPlayersButtons; // Array for all AddPlayersButtons
     public int readyUps = 0;
+    public TMP_Text readyText;
 
     // Predefined player colors
     private readonly string[] playerColors = {
