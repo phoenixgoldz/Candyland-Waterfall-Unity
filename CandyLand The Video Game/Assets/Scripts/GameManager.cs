@@ -33,6 +33,11 @@ public class GameManager : MonoBehaviour
     private Vector3 endPosition;
 
     void Start() {
+        //tests
+        //board.testFind();
+        //board.testFindDouble();
+        //board.testFindSpecial();
+
         players = new List<playerPawn>();
         for (int i = 0; i < PlayerPrefs.GetInt("players"); i++) {
             GameObject Go = Instantiate<GameObject>(playerPrefab, startTile.transform.position, Quaternion.identity);
