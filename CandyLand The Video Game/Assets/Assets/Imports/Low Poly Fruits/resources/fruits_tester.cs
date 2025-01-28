@@ -2,24 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class fruits_tester : MonoBehaviour {
+public class FruitsTester : MonoBehaviour
+{
+    public GameObject[] fruits;
+    public float rotationSpeed = 1.0f;
 
-	public GameObject[] fruits;
-	
-	// Update is called once per frame
-	void Update () 
-	{
-		
-		fruits[0].transform.RotateAround (Vector3.up, Time.deltaTime);
-		fruits[1].transform.RotateAround (Vector3.up, -Time.deltaTime);
-		fruits[2].transform.RotateAround (Vector3.up, Time.deltaTime);
-		fruits[3].transform.RotateAround (Vector3.up, -Time.deltaTime);
-		fruits[4].transform.RotateAround (Vector3.up, Time.deltaTime);
-		fruits[5].transform.RotateAround (Vector3.up, -Time.deltaTime);
-		fruits[6].transform.RotateAround (Vector3.up, Time.deltaTime);
-		fruits[7].transform.RotateAround (Vector3.up, -Time.deltaTime);
-		fruits[8].transform.RotateAround (Vector3.up, Time.deltaTime);
-		fruits[9].transform.RotateAround (Vector3.up, -Time.deltaTime);
-	
-	}
+    void Update()
+    {
+        for (int i = 0; i < fruits.Length; i++)
+        {
+            if (fruits[i] != null)
+            {
+                float direction = (i % 2 == 0) ? 1 : -1; // Alternate directions
+                fruits[i].transform.Rotate(Vector3.up, direction * rotationSpeed * Time.deltaTime, Space.World);
+            }
+        }
+    }
 }
