@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -46,13 +47,16 @@ public class board : MonoBehaviour
         }
 
         //update player locations
-        
         List<tile> betweenPath = new List<tile>();
         afterPlayerTile = false;
+        int pidx = 0;
+        int tidx = 0;
+        int i = 0;
         foreach (tile t in path)
         {
             if (player.currentTile == t)
             {
+                pidx = i;
                 afterPlayerTile = true;
             }
             if (afterPlayerTile)
@@ -61,9 +65,34 @@ public class board : MonoBehaviour
             }
             if (t == tile)
             {
+                tidx = i;
                 break;
             }
+            i++;
         }
+        //if 
+        if (betweenPath.Count == 0)
+        {
+            betweenPath = new List<tile>();
+            bool afterSpecialTile = false;
+            foreach (tile t in path)
+            {
+                if (tile == t)
+                {
+                    afterSpecialTile = true;
+                }
+                if (afterSpecialTile)
+                {
+                    betweenPath.Insert(0,t);
+                }
+                if (t == player.currentTile)
+                {
+                    break;
+                }
+            }
+        }
+
+
         return betweenPath;
 
 
