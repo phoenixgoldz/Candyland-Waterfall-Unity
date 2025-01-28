@@ -1,11 +1,13 @@
 using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using UnityEngine;
 
 public class board : MonoBehaviour
 {
 
     [SerializeField] List<tile> path = new List<tile>();
+    
 
     public List<tile> Move(playerPawn player, card card)
     {
@@ -137,58 +139,68 @@ public class board : MonoBehaviour
 
     public bool testFindSpecial()
     {
+        Debug.Log("Find Special: \n");
         card card = new card();
         //random card color
         card.special = (SPECIAL_TYPE)UnityEngine.Random.Range(0, 5);
         card.color = TILE_TYPE.SPECIAL;
-        Debug.Log("card to find");
-        Debug.Log(card.special);
+        Debug.Log("card to find: " + card.special);
         List<tile> Path = new List<tile>();
+
+        // Special Tile created at random index
+        tile ti = new tile();
+        ti.special = card.special;
+        ti.color = card.color;
+        ti.index = UnityEngine.Random.Range(0, 20);
+
         //random tiles
         for (int i = 0; i < 20; i++)
         {
-            tile t = new tile();
-            t.color = (TILE_TYPE)UnityEngine.Random.Range(0, 5);
-            t.special = SPECIAL_TYPE.NONE;
-            Path.Add(t);
+            if (i != ti.index)
+            {
+                tile t = new tile();
+                t.color = (TILE_TYPE)UnityEngine.Random.Range(0, 5);
+                t.special = SPECIAL_TYPE.NONE;
+                t.index = i;
+                Path.Add(t);
+            }else
+            {
+                Path.Add(ti);
+            }
         }
-        //insert special randomly inside path
-        tile ti = new tile();
-        ti.special = card.special;
-        Path.Insert(UnityEngine.Random.Range(0, 20), ti);
-
 
         //run method
-        tile found = findSpecial(card, Path);
+        tile found = findSpecial(card);
 
         //check result
-        Debug.Log("found special: " + found.special);
+        Debug.Log("found special: " + found.special + " at " + ti.index);
 
         //list of tiles
-        Debug.Log("tiles list");
-        Debug.Log("=============");
+
+        string output = "tiles list \n=============\n";
         for (int i = 0; i < Path.Count - 1; i++)
         {
-            Debug.Log("#" + i + " Tile Color: " + Path[i].color);
-            Debug.Log("#" + i + " Tile Special: " + Path[i].special);
+            output += ("#" + i + " Tile Color: " + Path[i].color + " | Tile Special: " + Path[i].special + "\n");
         }
+        Debug.Log(output);
         return (found.special == card.special);
     }
 
 
     public bool testFind()
     {
+        Debug.Log("Find: \n");
         card card = new card();
         //random card color
         card.color = (TILE_TYPE)UnityEngine.Random.Range(0, 5);
-        Debug.Log("card to find");
-        Debug.Log(card.color);
+        Debug.Log("card to find: " + card.color);
         List<tile> Path = new List<tile>();
         //random tiles
         for (int i = 0; i < 20; i++)
         {
             tile t = new tile();
             t.color = (TILE_TYPE)UnityEngine.Random.Range(0, 5);
+            t.index = i;
             Path.Add(t);
         }
         //end of edge case
@@ -200,31 +212,32 @@ public class board : MonoBehaviour
         tile found = find(card, Path);
 
         //check result
-        Debug.Log("found color: " + found.color);
+        Debug.Log("found color: " + found.color + " at " + found.index);
 
         //list of tiles
-        Debug.Log("tiles list");
-        Debug.Log("=============");
+        string output = "tiles list \n=============\n";
         for (int i = 0; i < Path.Count - 1; i++)
         {
-            Debug.Log("#" + i + " Tile Color: " + Path[i].color);
+            output += ("#" + i + " Tile Color: " + Path[i].color + "\n");
         }
+        Debug.Log(output);
         return (found.color == card.color);
     }
 
     public bool testFindDouble()
     {
+        Debug.Log("Find Double: \n");
         card card = new card();
         //random card color
         card.color = (TILE_TYPE)UnityEngine.Random.Range(0, 5);
-        Debug.Log("card to find");
-        Debug.Log(card.color);
+        Debug.Log("card to find:" + card.color);
         List<tile> Path = new List<tile>();
         //random tiles
         for (int i = 0; i < 10; i++)
         {
             tile t = new tile();
             t.color = (TILE_TYPE)UnityEngine.Random.Range(0, 5);
+            t.index = i;
             Path.Add(t);
         }
         //end of edge case
@@ -236,15 +249,15 @@ public class board : MonoBehaviour
         tile found = findDouble(card, Path);
 
         //check result
-        Debug.Log("found color: " + found.color);
+        Debug.Log("found color: " + found.color + " at " + found.index);
 
         //list of tiles
-        Debug.Log("tiles list");
-        Debug.Log("=============");
+        string output = "tiles list \n=============\n";
         for (int i = 0; i < Path.Count - 1; i++)
         {
-            Debug.Log("#" + i + " Tile Color: " + Path[i].color);
+            output += ("#" + i + " Tile Color: " + Path[i].color + "\n");
         }
+        Debug.Log(output);
         return (found.color == card.color);
     }
 }

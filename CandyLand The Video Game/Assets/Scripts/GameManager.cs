@@ -36,9 +36,9 @@ public class GameManager : MonoBehaviour
 
     void Start() {
         //tests
-        //board.testFind();
-        //board.testFindDouble();
-        //board.testFindSpecial();
+        board.testFind();
+        board.testFindDouble();
+        board.testFindSpecial();
 
         players = new List<playerPawn>();
         for (int i = 0; i < PlayerPrefs.GetInt("players"); i++) 
