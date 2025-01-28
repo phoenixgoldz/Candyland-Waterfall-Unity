@@ -11,14 +11,4 @@ public class playerPawn : MonoBehaviour
     [SerializeField] public int turnNumber;
     [SerializeField] public CinemachineCamera cam;
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

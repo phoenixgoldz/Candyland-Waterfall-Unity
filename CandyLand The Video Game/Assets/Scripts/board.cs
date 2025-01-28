@@ -7,11 +7,6 @@ public class board : MonoBehaviour
 
     [SerializeField] List<tile> path = new List<tile>();
 
-    private void Start()
-    {
-
-    }
-
     public List<tile> Move(playerPawn player, card card)
     {
         tile tile = new tile();
