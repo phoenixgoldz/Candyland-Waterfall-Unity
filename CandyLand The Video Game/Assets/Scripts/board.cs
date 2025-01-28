@@ -18,13 +18,13 @@ public class board : MonoBehaviour
         bool afterPlayerTile = false;
         foreach (tile t in path)
         {
+            if (afterPlayerTile)
+            {
+                remainingPath.Add(t);
+            }
             if (player.currentTile == t)
             {
                 afterPlayerTile = true;
-            }
-            if (afterPlayerTile ) 
-            {
-                remainingPath.Add(t);
             }
         }
 

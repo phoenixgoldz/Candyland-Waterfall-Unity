@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] CardManager cardManager;
     [SerializeField] tile startTile;
     [SerializeField] GameObject playerPrefab;
+    [SerializeField] GameObject DrawButton;
     
     //player updates
     playerPawn activePlayer;
@@ -86,7 +87,7 @@ public class GameManager : MonoBehaviour
             case GameState.INGAME:
                 if (activePlayer.turn)
                 {
-
+                    
                     if (!activePlayer.skipTurn)
                     {
                         if (drawled)
@@ -104,6 +105,7 @@ public class GameManager : MonoBehaviour
                         }
                         if (moving) //player movement
                         {
+                            DrawButton.SetActive(false);
                             if (currentTileIndex < tilesToMoveThrough.Count)
                             {
                                 moveTimer += Time.deltaTime;
@@ -135,6 +137,7 @@ public class GameManager : MonoBehaviour
                                     gameState = GameState.GAMEOVER;
                                 }
                                 tilesToMoveThrough.Clear();
+                                DrawButton.SetActive(true);
                             }
                         }
                     }
